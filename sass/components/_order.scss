@@ -1,4 +1,13 @@
 .order {
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/teams.jpg);
+    padding-bottom: 200px;
+    padding-top: 200px;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/teams-2.jpg);
+    }
     &__title {
         font-weight: 900;
         font-size: 44px;
