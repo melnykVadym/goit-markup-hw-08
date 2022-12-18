@@ -23,7 +23,56 @@
         <a class="logo link" href="/"
           ><span class="logo__text">Web</span>Studio</a
         >
-        <nav>
+        <button
+          class="header__burger js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <ul class="mobile-menu">
+            <li><a href="" class="link active">Студія</a></li>
+            <li><a href="" class="link">Портфоліо</a></li>
+            <li><a href="" class="link">Контакти</a></li>
+          </ul>
+          <div>
+            <ul class="list">
+              <li>
+                <a class="link" href="tel:+380961111111"> +38 096 111 11 11 </a>
+              </li>
+              <li>
+                <a class="link" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="list">
+              <li><a class="link" href="">Instagram</a></li>
+              <li><a class="link" href="">Twitter</a></li>
+              <li><a class="link" href="">Facebook</a></li>
+              <li><a class="link" href="">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="only-desktop">
           <ul class="list header-menu">
             <li>
               <a class="link header-menu__active list-link" href="#">Студія</a>
@@ -34,7 +83,7 @@
             <li><a class="link list-link" href="#">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="list header-contact">
+        <ul class="list header-contact only-desktop">
           <li class="header-contact__icon">
             <a
               class="link list-link header-contact__link"
@@ -61,7 +110,7 @@
       </div>
     </header>
     <main>
-      <section class="order section">
+      <!-- <section class="order section">
         <h1 class="order__title">Ефективні рішення для вашого бізнесу</h1>
         <button data-modal-open class="order__button" type="button">
           Замовити послугу
@@ -139,7 +188,7 @@
             </form>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="section features">
         <div class="container">
           <ul class="list box">
@@ -191,7 +240,7 @@
               </p>
             </li>
           </ul>
-          <div class="job">
+          <!-- <div class="job">
             <h2 class="job__title">Чим ми займаємося</h2>
             <ul class="list job__box">
               <li class="item box__item">
@@ -207,10 +256,10 @@
                 <div class="job__description">Дизайнерські рішення</div>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </section>
-      <section class="team section">
+      <!-- <section class="team section">
         <div class="container">
           <h2 class="tetle-text-team team__title">Наша команда</h2>
           <ul class="list team-flex">
@@ -413,9 +462,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer>
+    <!-- <footer>
       <div class="container bottom">
         <div class="bottom__wrapper">
           <a class="logo link logo--light" href="/"
@@ -496,7 +545,8 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

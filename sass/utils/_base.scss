@@ -16,8 +16,16 @@ h4 {
     padding: 0;
 }
 .container {
-    max-width: 1200px;
+    max-width: 480px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+    }
 }
 .link {
     text-decoration: none;
@@ -51,8 +59,17 @@ h4 {
 }
 .box {
     display: flex;
-    margin-bottom: 118px;
-    margin-left: -30px;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        margin-left: -30px;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 118px;
+        flex-wrap: nowrap;
+    }
     &__title {
         font-weight: 700;
         font-size: 14px;
@@ -60,6 +77,10 @@ h4 {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         margin-bottom: 10px;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
     }
     
     &__description {
@@ -69,17 +90,34 @@ h4 {
         color: var(--contact-color);
     }
     &__element {
-        flex-basis: calc((100% - 90px) / 4);
-        margin-left: 30px;
-        .box__wrapper-icon {
-            display: flex;
-            justify-items: center;
-            justify-content: center;
-            background-color: var(--projects-color);
-            height: 120px;
-            max-width: 270px;
+            max-width: 480px;
             margin-bottom: 30px;
-            border-radius: 4px;
+        @media screen and (min-width: 768px) {
+            max-width: 768px;
+            margin-left: 30px;
+            flex-basis: calc((100% - 60px) / 2);
+            
+        }
+        @media screen and (min-width: 1200px) {
+            max-width: 1200px;
+            flex-basis: calc((100% - 90px) / 4);
+            margin-bottom: 0px;
+        }
+    }
+    .box__wrapper-icon {
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        background-color: var(--projects-color);
+        height: 120px;
+        margin-bottom: 30px;
+        border-radius: 4px;
+        width: 100%;
+        @media screen and (min-width: 768px) {
+            max-width: 768px;
+        }
+        @media screen and (min-width: 1200px) {
+            max-width: 270px;
         }
     }
 }
