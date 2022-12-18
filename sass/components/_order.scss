@@ -1,23 +1,35 @@
 .order {
     max-width: 1600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/teams.jpg);
-    padding-bottom: 200px;
-    padding-top: 200px;
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/teams.jpg) no-repeat center / cover;
+    padding-bottom: 118px;
+    padding-top: 118px;
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/teams-2.jpg);
+        background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/teams-2x.jpg) no-repeat center / cover;
+    }
+    @media screen and (min-width: 768px){
+        padding-bottom: 200px;
+        padding-top: 200px;
     }
     &__title {
         font-weight: 900;
-        font-size: 44px;
-        line-height: calc(60 / 44);
         text-transform: uppercase;
         color: var(--main-color);
         letter-spacing: 0.06em;
         text-align: center;
         max-width: 696px;
         margin: 0 auto;
+        font-size: 26px;
+        line-height: calc(42 / 26);
+        @media screen and (min-width: 768px) {
+            font-size: 44px;
+            line-height: calc(60 / 44);
+        }
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 118px;
+            flex-wrap: nowrap;
+        }
     }
     &__button {
         background-color: var(--active-color);
