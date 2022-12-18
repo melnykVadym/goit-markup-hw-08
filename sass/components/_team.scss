@@ -2,23 +2,47 @@
     background-color: var(--projects-color);
     &__title {
         font-weight: 700;
-        font-size: 36px;
-        line-height: calc(42 / 36);
         letter-spacing: 0.03em;
         text-align: center;
-        margin-bottom: 50px;
+        font-size: 28px;
+        line-height: calc(33 / 28);  
+        margin-bottom: 30px;    
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 118px;
+            flex-wrap: nowrap;
+            font-size: 36px;
+            line-height: calc(42 / 36);
+            margin-bottom: 50px;
+        }
     }
     .team-flex {
         display: flex;
+        flex-wrap: wrap;
         text-align: center;
-        margin-left: -30px;
+        margin-bottom: -30px;
+        @media screen and (min-width: 768px) {
+            margin-left: -30px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 0;
+        }
         &__item {
-            margin-left: 30px;
-            flex-basis: calc((100% - 90px) / 4);
+            margin-left: 30px; 
+            margin-bottom: 30px;
+            flex-basis: 100%;
             border-radius: 0px 0px 4px 4px;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
             & > img {
                 width: 100%;
+            }
+                
+            @media screen and (min-width: 768px) {
+                flex-basis: calc((100% - 90px) / 2);
+            }
+            @media screen and (min-width: 1200px) {
+               flex-basis: calc((100% - 120px) / 4);
+               margin-bottom: 0;
             }
         }
         li {
